@@ -118,7 +118,10 @@ class _HomeScreenState extends State<HomeScreen> {
             TextButton(
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const DetailScreen();
+                  return DetailScreen(
+                      foodName: dropValue,
+                      price: amount(priceOfFood()),
+                      quantity: quantity);
                 }));
               },
               child: const Text(
